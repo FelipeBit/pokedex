@@ -1,0 +1,15 @@
+stages:
+  - build
+  - test
+
+build-code-job:
+  stage: build
+  script:
+    - echo "Build project:"
+    - react-scripts build
+
+test-code-job1:
+  stage: test
+  script:
+    - echo "If the files are built successfully, test some files with one command:"
+    - react-scripts test
