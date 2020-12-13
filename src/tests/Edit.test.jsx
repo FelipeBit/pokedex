@@ -23,7 +23,6 @@ describe("Edit Page", ()=> {
     const route = '/edit';
     history.push(route);
 
-
     const {debug} = render(
         <MemoryRouter initialEntries={['edit/UG9rZW1vbjowMDE=']}>
             <Provider store={store}>
