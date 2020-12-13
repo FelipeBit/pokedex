@@ -21,7 +21,7 @@ After that you will be able to run this project
 
 # Project image
 
-![project image](https://gitlab.com/felipebit/pokemon/-/blob/main/src/assets/pokedex.jpg)
+![project image](src/assets/pokedex.jpg)
 
 
 
