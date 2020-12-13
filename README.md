@@ -1,10 +1,14 @@
 # Prerequisites
 
-1 - Clone this project and run on your machine (the project server is down):
+1 - Node
 
-[](https://github.com/lucasbento/graphql-pokemon.git)
+2 - Clone this project and run on your machine (the project server is down):
+
+[graphql-pokemon](https://github.com/lucasbento/graphql-pokemon.git)
 
 After that you will be able to run this project
+
+# To run this project
 
 2 - npm install
 
