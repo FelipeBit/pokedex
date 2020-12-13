@@ -21,7 +21,7 @@ describe("Edit Page", ()=> {
 
     const history = createMemoryHistory();
     const route = '/edit';
-    
+
     history.push(route);
 
     const {debug} = render(
@@ -39,10 +39,7 @@ describe("Edit Page", ()=> {
     await waitFor(() => {
         expect(screen.getByText('Salvo com sucesso!')).toBeInTheDocument()
     })
-
-
   })
-  
 })
 
 
