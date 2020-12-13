@@ -1,13 +1,20 @@
 import React from 'react';
 
-
-import {
-    Link
-  } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import './Card.css'
 
 export default function Card(props) {
+    const history = useHistory();
+
+    function handleDetail() {
+        history.push(`detail/${props.pokemonId}`);
+    }
+
+    function handleEdit() {
+        history.push(`edit/${props.pokemonId}`);
+    }
+
     return (
         <div className="card">
             <p className="name">{props.name}</p>
@@ -18,8 +25,8 @@ export default function Card(props) {
             </div>
             <img src={props.image} className="pokemon-img" alt={`pokemon ${props.name}`}></img>
             <div className="buttonsWrapper">
-                <Link to={`detail/${props.pokemonId}`}>DETALHES</Link>
-                <Link to={`edit/${props.pokemonId}`}>EDITAR</Link>
+                <button data-testis={props.name} onClick={handleDetail}>DETAILS</button>
+                <button onClick={handleEdit}>EDIT</button>
             </div>
             
         </div>

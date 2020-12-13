@@ -5,7 +5,22 @@ body{
   font-family: 'pokemon-font', monospace;
 }
 
+a{
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  padding: 3px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .container {
   display: grid;
+  grid-template-columns: auto;
+  padding: 0;
+  height: 100%;
 }
 

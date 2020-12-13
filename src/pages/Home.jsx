@@ -14,30 +14,34 @@ export default function Home() {
         setFilteredPokemons(pokemons)
       } else {
         const filteredResult = pokemons?.filter(pokemon => pokemon.name.toLowerCase().includes(name.toLowerCase()))
-        !name ? setFilteredPokemons(JSON.parse(localStorage.getItem('@pokedex/pokemons'))) : setFilteredPokemons(filteredResult)
+        !name ? setFilteredPokemons(pokemons) : setFilteredPokemons(filteredResult)
       }
+
     },[name]);
     
 
     return (
-      <>
-        <form >
+      <section>
+        <div className="searchbox-wrapper">
+        <div >
           <label>
             Pokemon Name:
           <input
+            className="searchbox"
             type="text"
+            placeholder="Enter a name..."
             value={name}
             onChange={e => setName(e.target.value)}
           />
         </label>
-     
-        </form>
+        </div>
+        </div>
           <div className="pokedex">
             {
               filteredPokemons && filteredPokemons.length > 0 ? (
                 filteredPokemons.map((pokemon)=> 
                   (
-                    <div key={pokemon.id} className="card-container">
+                    <div key={pokemon.id} data-testid={pokemon.name} className="card-container">
                       <Card  pokemonId={pokemon.id} name={pokemon.name} types={pokemon.types} image={pokemon.image}/>
                     </div>
                   )
@@ -45,7 +49,7 @@ export default function Home() {
               ) : null  
             }
           </div>
-      </>
+      </section>
     );
 }
 

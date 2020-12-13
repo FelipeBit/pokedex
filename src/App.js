@@ -14,10 +14,12 @@ import './App.css';
 function App() {
 
   return (
-    <Provider store={store}>
-    <ApolloProvider client={client} className="container">
-     {/*<Header/>*/}
-     <Routes/>
+    <Provider store={store} >
+    <ApolloProvider client={client} >
+      <div className="container" >
+     <Header/>
+     <Routes data-testid={'routes'} />
+     </div>
     </ApolloProvider>
     </Provider>
   );

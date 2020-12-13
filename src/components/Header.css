@@ -1,8 +1,6 @@
-.header {
-    height: 50px;
+header {
     width: 100%;
     background-color: red;
-    position: fixed;
 }
 
 .red-line{
