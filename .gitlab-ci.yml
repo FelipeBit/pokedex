@@ -1,15 +1,26 @@
+image: node:latest
 stages:
   - build
   - test
+  - deploy
 
-build-code-job:
+build-job:
   stage: build
+  before_script:
+    - npm install
   script:
-    - echo "Build project:"
-    - react-scripts build
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+    - npm run-script build
 
-test-code-job1:
+test-job1:
   stage: test
+  before_script:
+    - npm install
   script:
-    - echo "If the files are built successfully, test some files with one command:"
-    - react-scripts test
+    - echo "Testing"
+    - npm run-script test
+
+deploy-prod:
+  stage: deploy
+  script:
+    - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
