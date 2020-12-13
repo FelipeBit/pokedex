@@ -21,6 +21,7 @@ describe("Edit Page", ()=> {
 
     const history = createMemoryHistory();
     const route = '/edit';
+    
     history.push(route);
 
     const {debug} = render(
