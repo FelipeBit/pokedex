@@ -10,6 +10,8 @@ After that you will be able to run this project
 
 # To run this project
 
+1 - Download the project
+
 2 - npm install
 
 3 - npm run start
